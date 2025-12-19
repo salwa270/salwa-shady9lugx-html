@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>LUGX</title>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===== HEADER ===== */
+    .headerContainer {
+      background-color: #0171F9;
+    }
+
+    .header {
+      height: auto;
+      background-color: #0171F9;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 100px;
+      max-width: 1300px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      width: 120px;
+      mix-blend-mode: multiply;
+    }
+
+    .headerLinks {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .headerLinks a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50px;
+      transition: .3s;
+    }
+
+    .headerLinks a:hover {
+      background-color: #1A7FF9;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn {
+      border-radius: 50px;
+      height: 45px;
+      border: none;
+      font-weight: 600;
+      font-size: medium;
+      padding: 0 20px;
+      background-color: #EE626B;
+      color: #fff;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background-color: #9E4147;
+      cursor: pointer;
+    }
+
+    /* ===== LANDING ===== */
+    .landingPageContainer {
+      background-color: #0171F9;
+      border-radius: 0 0 100px 100px;
+    }
+
+    .landingPage {
+      display: flex;
+      color: #fff;
+      padding: 100px 0;
+      max-width: 1300px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .leftSide {
+      flex: 1;
+      padding-top: 30px;
+    }
+
+    .landingPage .slogan {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 50px;
+    }
+
+    .landingPage .welcome {
+      font-size: x-large;
+    }
+
+    .landingPage .description {
+      color: #000;
+      width: 80%;
+      font-weight: 500;
+    }
+
+    .searchBar {
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .searchBar input {
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      width: 100%;
+      max-width: 350px;
+      height: 50px;
+      font-size: large;
+      padding-left: 20px;
+    }
+
+    .searchBar .searchBtn {
+      margin-top: 15px;
+    }
+
+    .imageContainer {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .imageContainer img {
+      max-width: 350px;
+      border-radius: 20px;
+    }
+
+    /* ===== TRENDING ===== */
+    .trendingContainer {
+      max-width: 1300px;
+      margin: 100px auto 0;
+    }
+
+    .trendingHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+
+    .trendingCard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      width: calc(25% - 20px);
+      transition: .3s;
+    }
+
+    .card img {
+      border-radius: 20px;
+    }
+
+    .cardInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #eee;
+      padding: 15px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .icon img {
+      width: 40px;
+      transition: .3s;
+    }
+
+    .icon img:hover {
+      transform: scale(1.2);
+    }
+
+    /* ===== MOST PLAYED ===== */
+    .mostContainer {
+      background-color: #eee;
+      margin-top: 150px;
+      padding: 50px;
+      border-radius: 100px;
+    }
+
+    .mostPlayed {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .mostCards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* ===== CATEGORY ===== */
+    .categoryContainer {
+      margin-top: 150px;
+    }
+
+    .category {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .categoryCards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .category .genre {
+      background-color: #0171F9;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footerContainer {
+      background-color: #0171F9;
+      height: 150px;
+      border-radius: 100px 100px 0 0;
+      margin-top: 100px;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer {
+      max-width: 1300px;
+      margin: auto;
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      font-size: larger;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .headerLinks {
+        flex-direction: column;
+      }
+
+      .landingPage {
+        text-align: center;
+      }
+
+      .landingPage .description {
+        width: 100%;
+      }
+      /* ===== FORCE HOVER EFFECT ===== */
+.trendingCard .card,
+.mostCards .card,
+.categoryCards .card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.trendingCard .card:hover,
+.mostCards .card:hover,
+.categoryCards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== IMAGE ZOOM ===== */
+.trendingCard .card img,
+.mostCards .card img,
+.categoryCards .card img {
+  transition: transform 0.4s ease;
+}
+
+.trendingCard .card:hover img,
+.mostCards .card:hover img,
+.categoryCards .card:hover img {
+  transform: scale(1.08);
+}
+
+      .card {
+        width: 100%;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="headerContainer">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="logo.jpeg" alt="logo" />
+      </a>
+
+      <ul class="headerLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#trending">Trending</a></li>
+        <li><a href="#most-played">Most Played</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><button class="btn">Sign In</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- باقي الصفحة زي ما هي عندك -->
+
+   <!-- LANDING PAGE -->
+<div class="landingPageContainer">
+  <div class="landingPage">
+
+    <div class="leftSide">
+      <p class="welcome">Welcome to LUGX</p>
+      <h1 class="slogan">best gaming site ever!</h1>
+      <p class="description">
+        LUGX Gaming is free Bootstrap 5 HTML CSS website template for your
+        gaming websites. You can download and use this layout for commercial
+        purposes. Please tell your friends about TemplateMo.
+      </p>
+
+      <div class="searchBar">
+        <input type="text" placeholder="Type Something" />
+        <button class="btn searchBtn">SEARCH NOW</button>
+      </div>
+    </div>
+
+    <div class="imageContainer">
+      <img src="image1.jpeg" alt="main image" />
+    </div>
+
+  </div>
+</div>
+
+<!-- TRENDING -->
+<div class="trendingContainer" id="trending">
+  <span>Trending</span>
+
+  <div class="trendingHeader">
+    <h1>Trending Games</h1>
+    <button class="btn">view all</button>
+  </div>
+
+  <div class="trendingCard">
+
+    <div class="card">
+      <img src="image2.jpeg" alt="" />
+      <div class="cardInfo">
+        <div class="cardName">
+          <p>Action</p>
+          <h3>Assasin Creed</h3>
+        </div>
+        <a href="#" class="icon">
+          <img src="image7.jpeg" alt="bag" />
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image4.jpeg" alt="" />
+      <div class="cardInfo">
+        <div class="cardName">
+          <p>Action</p>
+          <h3>Assasin Creed</h3>
+        </div>
+        <a href="#" class="icon">
+          <img src="image7.jpeg" alt="bag" />
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image9.jpeg" alt="" />
+      <div class="cardInfo">
+        <div class="cardName">
+          <p>Action</p>
+          <h3>Assasin Creed</h3>
+        </div>
+        <a href="#" class="icon">
+          <img src="image7.jpeg" alt="bag" />
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image8.jpeg" alt="" />
+      <div class="cardInfo">
+        <div class="cardName">
+          <p>Action</p>
+          <h3>Assasin Creed</h3>
+        </div>
+        <a href="#" class="icon">
+          <img src="image7.jpeg" alt="bag" />
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MOST PLAYED -->
+<div class="mostContainer" id="most-played">
+  <div class="mostPlayed">
+
+    <span>top games</span>
+
+    <div class="mostHeader">
+      <h1>Most Played</h1>
+      <button class="btn">view all</button>
+    </div>
+
+    <div class="mostCards">
+
+      <div class="card">
+        <div class="cardImg">
+          <img src="image2.jpeg" alt="" />
+        </div>
+        <div class="cardInfo">
+          <p class="genre">Adventure</p>
+          <h3 class="cardName">Assasin Creed</h3>
+          <button class="btn">explore</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardImg">
+          <img src="image4.jpeg" alt="" />
+        </div>
+        <div class="cardInfo">
+          <p class="genre">Adventure</p>
+          <h3 class="cardName">Assasin Creed</h3>
+          <button class="btn">explore</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardImg">
+          <img src="image3.jpeg" alt="" />
+        </div>
+        <div class="cardInfo">
+          <p class="genre">Adventure</p>
+          <h3 class="cardName">Assasin Creed</h3>
+          <button class="btn">explore</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardImg">
+          <img src="image5.jpeg" alt="" />
+        </div>
+        <div class="cardInfo">
+          <p class="genre">Adventure</p>
+          <h3 class="cardName">Assasin Creed</h3>
+          <button class="btn">explore</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="categoryContainer" id="categories">
+  <div class="category">
+
+    <div class="categoryHeader">
+      <span>top games</span>
+      <h1>Top Categories</h1>
+    </div>
+
+    <div class="categoryCards">
+
+      <div class="card">
+        <div class="genre">Action</div>
+        <div class="cardImg">
+          <img src="WhatsApp Image 2025-12-16 at 7.37.10 AM (4).jpeg" alt="" />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="genre">Action</div>
+        <div class="cardImg">
+          <img src="WhatsApp Image 2025-12-16 at 7.37.10 AM (2).jpeg" alt="" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footerContainer">
+  <div class="footer">
+    copyright &copy; 2025 LUGX Gaming Company.
+    All rights reserved. Design: TemplateMo Salwa Shady
+  </div>
+</div>
+</body>
+</html>
